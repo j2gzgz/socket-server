@@ -3,8 +3,9 @@ import router from './routes/router';
 import bodyParser from 'body-parser';
 import cors from 'cors'
 
-
-const server = new Server();
+//por implementación patrón Singleton
+const server = Server.instance;
+//const server = new Server();
 
 // body-parser
 server.app.use( bodyParser.urlencoded({ extended: true}) );
